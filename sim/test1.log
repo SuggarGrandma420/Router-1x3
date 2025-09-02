@@ -1,0 +1,175 @@
+# vsim -cvgperinstance -vopt -voptargs="+acc" -coverage -sva -c -do " log -r /* ;coverage save -onexit router_cov1;run -all; exit" -wlf wave_file1.wlf -l test1.log -sv_seed random work.router_tb_top "+UVM_VERBOSITY=UVM_NONE" "+UVM_TESTNAME=test_payload_lt_14" 
+# Start time: 22:43:28 on Sep 02,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vopt-143) Recognized 1 FSM in module "router_fsm(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# //  Questa Sim-64
+# //  Version 2024.1 win64 Feb  1 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.router_if(fast)
+# Loading mtiUvm.uvm_pkg(fast)
+# Loading work.router_pkg(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.router_tb_top(fast)
+# Loading work.router_if(fast__2)
+# Loading work.router_if(fast__3)
+# Loading work.router_top(fast)
+# Loading work.router_fifo(fast)
+# Loading work.router_sync(fast)
+# Loading work.router_fsm(fast)
+# Loading work.router_reg(fast)
+# Loading work.router_assertions(fast)
+# Loading C:/questasim64_2024.1/uvm-1.1d\win64\uvm_dpi.dll
+# ** Warning: (vsim-8634) Code was not compiled with coverage options.
+# Sv_Seed = 744794694
+#  log -r /* 
+# coverage save -onexit router_cov1
+# run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# --------------------------------------------------------------------
+# Name                         Type                        Size  Value
+# --------------------------------------------------------------------
+# uvm_test_top                 test_payload_lt_14          -     @481 
+#   envh                       router_env                  -     @501 
+#     ragt_toph                rd_agent_top                -     @627 
+#       ragnth[0]              rd_agent                    -     @645 
+#         drvh                 rd_driver                   -     @689 
+#           rsp_port           uvm_analysis_port           -     @704 
+#           seq_item_port      uvm_seq_item_pull_port      -     @696 
+#         monh                 rd_monitor                  -     @674 
+#           rmon2sb_port       uvm_analysis_port           -     @681 
+#         seqrh                rd_sequencer                -     @712 
+#           rsp_export         uvm_analysis_export         -     @719 
+#           seq_item_export    uvm_seq_item_pull_imp       -     @813 
+#           arbitration_queue  array                       0     -    
+#           lock_queue         array                       0     -    
+#           num_last_reqs      integral                    32    'd1  
+#           num_last_rsps      integral                    32    'd1  
+#       ragnth[1]              rd_agent                    -     @656 
+#         drvh                 rd_driver                   -     @843 
+#           rsp_port           uvm_analysis_port           -     @858 
+#           seq_item_port      uvm_seq_item_pull_port      -     @850 
+#         monh                 rd_monitor                  -     @828 
+#           rmon2sb_port       uvm_analysis_port           -     @835 
+#         seqrh                rd_sequencer                -     @866 
+#           rsp_export         uvm_analysis_export         -     @873 
+#           seq_item_export    uvm_seq_item_pull_imp       -     @967 
+#           arbitration_queue  array                       0     -    
+#           lock_queue         array                       0     -    
+#           num_last_reqs      integral                    32    'd1  
+#           num_last_rsps      integral                    32    'd1  
+#       ragnth[2]              rd_agent                    -     @664 
+#         drvh                 rd_driver                   -     @997 
+#           rsp_port           uvm_analysis_port           -     @1012
+#           seq_item_port      uvm_seq_item_pull_port      -     @1004
+#         monh                 rd_monitor                  -     @982 
+#           rmon2sb_port       uvm_analysis_port           -     @989 
+#         seqrh                rd_sequencer                -     @1020
+#           rsp_export         uvm_analysis_export         -     @1027
+#           seq_item_export    uvm_seq_item_pull_imp       -     @1121
+#           arbitration_queue  array                       0     -    
+#           lock_queue         array                       0     -    
+#           num_last_reqs      integral                    32    'd1  
+#           num_last_rsps      integral                    32    'd1  
+#     sbh                      router_sb                   -     @635 
+#       r_fifo_h[0]            uvm_tlm_analysis_fifo #(T)  -     @1182
+#         analysis_export      uvm_analysis_imp            -     @1221
+#         get_ap               uvm_analysis_port           -     @1213
+#         get_peek_export      uvm_get_peek_imp            -     @1197
+#         put_ap               uvm_analysis_port           -     @1205
+#         put_export           uvm_put_imp                 -     @1189
+#       r_fifo_h[1]            uvm_tlm_analysis_fifo #(T)  -     @1229
+#         analysis_export      uvm_analysis_imp            -     @1268
+#         get_ap               uvm_analysis_port           -     @1260
+#         get_peek_export      uvm_get_peek_imp            -     @1244
+#         put_ap               uvm_analysis_port           -     @1252
+#         put_export           uvm_put_imp                 -     @1236
+#       r_fifo_h[2]            uvm_tlm_analysis_fifo #(T)  -     @1276
+#         analysis_export      uvm_analysis_imp            -     @1315
+#         get_ap               uvm_analysis_port           -     @1307
+#         get_peek_export      uvm_get_peek_imp            -     @1291
+#         put_ap               uvm_analysis_port           -     @1299
+#         put_export           uvm_put_imp                 -     @1283
+#       w_fifo_h[0]            uvm_tlm_analysis_fifo #(T)  -     @1135
+#         analysis_export      uvm_analysis_imp            -     @1174
+#         get_ap               uvm_analysis_port           -     @1166
+#         get_peek_export      uvm_get_peek_imp            -     @1150
+#         put_ap               uvm_analysis_port           -     @1158
+#         put_export           uvm_put_imp                 -     @1142
+#     vseqrh                   v_sequencer                 -     @509 
+#       rsp_export             uvm_analysis_export         -     @516 
+#       seq_item_export        uvm_seq_item_pull_imp       -     @610 
+#       arbitration_queue      array                       0     -    
+#       lock_queue             array                       0     -    
+#       num_last_reqs          integral                    32    'd1  
+#       num_last_rsps          integral                    32    'd1  
+#     wagt_toph                wr_agent_top                -     @618 
+#       wagnth[0]              wr_agent                    -     @1330
+#         drvh                 wr_driver                   -     @1358
+#           rsp_port           uvm_analysis_port           -     @1373
+#           seq_item_port      uvm_seq_item_pull_port      -     @1365
+#         monh                 wr_monitor                  -     @1343
+#           wmon2sb_port       uvm_analysis_port           -     @1350
+#         seqrh                wr_sequencer                -     @1381
+#           rsp_export         uvm_analysis_export         -     @1388
+#           seq_item_export    uvm_seq_item_pull_imp       -     @1482
+#           arbitration_queue  array                       0     -    
+#           lock_queue         array                       0     -    
+#           num_last_reqs      integral                    32    'd1  
+#           num_last_rsps      integral                    32    'd1  
+# --------------------------------------------------------------------
+# 
+# ===================== Scoreboard Result =====================
+# Number of write transaction : 1000
+# Number of read transaction  : 1000
+# Number of success packets   : 1000
+# Number of corrupt packets   : 0
+# =============================================================
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :    0
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# ** Note: $finish    : C:/questasim64_2024.1/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 302945 ns  Iteration: 68  Instance: /router_tb_top
+# Saving coverage database on exit...
+# End time: 22:43:33 on Sep 02,2025, Elapsed time: 0:00:05
+# Errors: 0, Warnings: 2
