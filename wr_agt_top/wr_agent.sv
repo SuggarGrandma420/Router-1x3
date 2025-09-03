@@ -33,5 +33,5 @@ endfunction : build_phase
 
 function void wr_agent::connect_phase(uvm_phase phase);
   super.connect_phase(phase);
-  drvh.seq_item_port.connect(seqrh.seq_item_export);
+  if (w_cfg.is_active == UVM_ACTIVE) drvh.seq_item_port.connect(seqrh.seq_item_export);
 endfunction : connect_phase
