@@ -42,19 +42,28 @@ endfunction : build_phase
 
 function void router_env::connect_phase(uvm_phase phase);
   super.connect_phase(phase);
-  vseqrh.wseqrh = new[env_cfg.no_of_wr_agt];
-  foreach (wagt_toph.wagnth[i]) begin
-    vseqrh.wseqrh[i] = wagt_toph.wagnth[i].seqrh;
-  end
-  vseqrh.rseqrh = new[env_cfg.no_of_rd_agt];
-  foreach (ragt_toph.ragnth[i]) begin
-    vseqrh.rseqrh[i] = ragt_toph.ragnth[i].seqrh;
+  if (env_cfg.has_virtual_sequencer && env_cfg.has_wagt_top) begin
+    vseqrh.wseqrh = new[env_cfg.no_of_wr_agt];
+    foreach (wagt_toph.wagnth[i]) begin
+      vseqrh.wseqrh[i] = wagt_toph.wagnth[i].seqrh;
+    end
   end
 
-  foreach (wagt_toph.wagnth[i]) begin
-    wagt_toph.wagnth[i].monh.wmon2sb_port.connect(sbh.w_fifo_h[i].analysis_export);
+  if (env_cfg.has_virtual_sequencer && env_cfg.has_ragt_top) begin
+    vseqrh.rseqrh = new[env_cfg.no_of_rd_agt];
+    foreach (ragt_toph.ragnth[i]) begin
+      vseqrh.rseqrh[i] = ragt_toph.ragnth[i].seqrh;
+    end
   end
-  foreach (ragt_toph.ragnth[i]) begin
-    ragt_toph.ragnth[i].monh.rmon2sb_port.connect(sbh.r_fifo_h[i].analysis_export);
+
+  if (env_cfg.has_wagt_top && env_cfg.has_scoreboard) begin
+    foreach (wagt_toph.wagnth[i]) begin
+      wagt_toph.wagnth[i].monh.wmon2sb_port.connect(sbh.w_fifo_h[i].analysis_export);
+    end
+  end
+  if (env_cfg.has_ragt_top && env_cfg.has_scoreboard) begin
+    foreach (ragt_toph.ragnth[i]) begin
+      ragt_toph.ragnth[i].monh.rmon2sb_port.connect(sbh.r_fifo_h[i].analysis_export);
+    end
   end
 endfunction : connect_phase
